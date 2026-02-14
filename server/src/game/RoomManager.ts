@@ -8,19 +8,19 @@ export class RoomManager {
         this.rooms = new Map();
     }
 
-    createRoom(roomId: string): Room {
+    createRoom(roomId: string, gameMode: '1v1' | '2v2' = '1v1', isRanked: boolean = false): Room {
         if (this.rooms.has(roomId)) {
             return this.rooms.get(roomId)!;
         }
-        const newRoom = new Room(roomId);
+        const newRoom = new Room(roomId, undefined, gameMode, isRanked);
         this.rooms.set(roomId, newRoom);
         return newRoom;
     }
 
-    joinRoom(roomId: string, player: Player): Room | null {
+    joinRoom(roomId: string, player: Player, gameMode?: '1v1' | '2v2', isRanked?: boolean): Room | null {
         let room = this.rooms.get(roomId);
         if (!room) {
-            room = this.createRoom(roomId);
+            room = this.createRoom(roomId, gameMode, isRanked);
         }
 
         // Check if room is full or in progress

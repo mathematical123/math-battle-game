@@ -1,0 +1,132 @@
+.lobby-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.lobby-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.lobby-header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+}
+
+.mode-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.players-list {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.teams-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 2rem;
+}
+
+.team {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.team h3 {
+    margin: 0 0 1rem 0;
+    text-align: center;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.team.team-1 h3 {
+    color: #11998e;
+}
+
+.team.team-2 h3 {
+    color: #ee0979;
+}
+
+.player-card {
+    background: #f8f8f8;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    transition: all 0.2s;
+}
+
+.player-card.ready {
+    background: #e8f5e9;
+    border: 2px solid #4caf50;
+}
+
+.player-card.empty {
+    opacity: 0.5;
+    font-style: italic;
+    justify-content: center;
+}
+
+.player-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.ready-badge {
+    background: #4caf50;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.ready-btn {
+    padding: 1.25rem 3rem;
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 8px 20px rgba(17, 153, 142, 0.3);
+}
+
+.ready-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(17, 153, 142, 0.4);
+}
+
+.ready-btn.unready {
+    background: linear-gradient(135deg, #ee0979, #ff6a00);
+    box-shadow: 0 8px 20px rgba(238, 9, 121, 0.3);
+}
+
+.ready-btn.unready:hover {
+    box-shadow: 0 12px 24px rgba(238, 9, 121, 0.4);
+}

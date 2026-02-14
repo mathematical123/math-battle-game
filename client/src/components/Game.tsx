@@ -4,7 +4,6 @@ import { useGameStore } from '../store/gameStore';
 export const Game = () => {
     const { players, currentProblem, playerId, submitAnswer, status, winner } = useGameStore();
     const [answer, setAnswer] = useState('');
-    const [feedback, setFeedback] = useState<string | null>(null);
     const inputRef = useRef<HTMLInputElement>(null);
 
     const me = players.find(p => p.id === playerId);
